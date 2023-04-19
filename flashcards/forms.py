@@ -24,21 +24,8 @@ class FlashCardAdder(ModelForm):
         }
 
 
-# class FlashCardForm(forms.ModelForm):
-#     back = forms.CharField(
-#         label='',
-#         widget=forms.TextInput(attrs={
-#             'class': 'form-control',
-#             'placeholder': 'Tłumaczenie',
-#             'autocomplete': 'off'}
-#         ))
-#
-#     class Meta:
-#         model = FlashCard
-#         fields = ('back',)
-
 class FlashCardForm(forms.Form):
-    back = forms.CharField(label='', max_length=120, widget=forms.TextInput(attrs={'placeholder': 'Enter answer'}))
+    back = forms.CharField(label='', max_length=120, widget=forms.TextInput(attrs={'placeholder': 'Tłumaczenie'}))
 
 
 
