@@ -1,0 +1,13 @@
+{% extends 'flashcards/base.html' %}
+
+{% block content %}
+
+    <center>
+        <h1>Cześć {{ name }} </h1>
+            </br>
+            {{ cal|safe }}
+            </br>
+        Mamy {{ current_year }} rok. Jest godzina {{ time }} .
+    </center>
+
+{% endblock %}

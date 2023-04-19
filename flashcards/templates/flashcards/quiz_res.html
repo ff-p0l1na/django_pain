@@ -1,0 +1,9 @@
+{% extends 'flashcards/base.html' %}
+
+{% block content %}
+{% if message %}
+    <p>{{ message }}</p>
+{% else %}
+    <p>No message</p>
+{% endif %}
+{% endblock %}

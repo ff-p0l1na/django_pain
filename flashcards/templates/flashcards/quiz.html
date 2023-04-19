@@ -1,0 +1,14 @@
+{% extends 'flashcards/base.html' %}
+
+{% block content %}
+
+  <h2>Quiz</h2>
+  <p>{{ flashcard.front }}</p>
+  <form method="POST">
+    {% csrf_token %}
+    <p>{{ flashcard.front }}</p>
+    <input type="text" name="back" value="" placeholder="Type your answer here" required>
+    <button type="submit">Sprawdź</button>
+</form>
+
+{% endblock %}
