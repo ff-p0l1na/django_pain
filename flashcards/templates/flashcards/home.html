@@ -2,12 +2,39 @@
 
 {% block content %}
 
-    <center>
-        <h1>Cześć {{ name }} </h1>
-            </br>
-            {{ cal|safe }}
-            </br>
-        Mamy {{ current_year }} rok. Jest godzina {{ time }} .
-    </center>
+<h1>Cześć {{ name }} </h1>
+</br></br>
+
+<div class="container text-center">
+  <div class="row align-items-start">
+    <div class="col">
+<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+<div class="carousel-inner">
+    <div class="carousel-item active">
+      <h2><span class="badge rounded-pill text-bg-info">Dla marudnych i zajętych ludzi.</span></h2>
+    </div>
+    <div class="carousel-item">
+        <h2><span class="badge rounded-pill text-bg-danger">Jedna powtórka jeszcze nikogo nie dobiła, więc quiz, to tylko kilka sekund.</span></h2>
+    </div>
+    <div class="carousel-item">
+        <h2><span class="badge rounded-pill text-bg-warning">Stwórz kartę ze słówkiem i jego tłumaczeniem i daj się zaskoczyć pytaniem w dowolnym momencie.</span></h2>
+    </div>
+</div>
+</div>
+
+</br>
+</br>
+Enjoy darmowe przypomnienie jaki mamy miesiąc po angielsku:
+ </br></br>
+        <div class="badge bg-primary text-wrap" style="width: 10rem;">
+        {{ cal|safe }}
+        </div>
+</br></br>
+Mamy {{ current_year }} rok. Jest godzina {{ time }} .
+    </div>
+  </div>
+</div>
+
+
 
 {% endblock %}

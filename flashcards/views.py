@@ -3,7 +3,7 @@ from calendar import HTMLCalendar
 from datetime import datetime
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import get_object_or_404, render, redirect
 from .models import FlashCard
 from .forms import FlashCardAdder, FlashCardForm
 
@@ -29,7 +29,6 @@ def add_flashcard(request):
 @login_required
 def all_flashcards(request):
     fc_list = FlashCard.objects.filter(author=request.user)
-
     return render(request, 'flashcards/fc_list.html',
                   {'fc_list': fc_list})
 

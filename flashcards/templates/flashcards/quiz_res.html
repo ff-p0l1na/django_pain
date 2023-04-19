@@ -1,9 +1,10 @@
 {% extends 'flashcards/base.html' %}
 
 {% block content %}
+<h1>Twój wynik to...</h1>
+</br>
 {% if message %}
-    <p>{{ message }}</p>
-{% else %}
-    <p>No message</p>
+  <h2><span class="badge rounded-pill text-bg-info">{{ message }}</span></h2>
 {% endif %}
+
 {% endblock %}

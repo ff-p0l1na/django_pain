@@ -8,12 +8,12 @@
 
    {% else %}
 
-      <form action="" method=POST>
+      <form action="" method=POST autocomplete="off">
          {% csrf_token %}
 
          {{ form.as_p }}
 
-         <input type="submit" value="Submit" class="btn btn-secondary">
+         <input type="submit" value="Dodaj" class="btn btn-secondary">
       </form>
 
    {% endif %}

@@ -2,13 +2,26 @@
 
 {% block content %}
 
-  <h2>Quiz</h2>
-  <p>{{ flashcard.front }}</p>
-  <form method="POST">
-    {% csrf_token %}
-    <p>{{ flashcard.front }}</p>
-    <input type="text" name="back" value="" placeholder="Type your answer here" required>
-    <button type="submit">Sprawdź</button>
-</form>
+<h2>Szybki strzał</h2>
+</br>
+
+<div class="card">
+
+  <div class="card-header">
+  <strong> {{ flashcard.front }} </strong>
+  </div>
+
+    <div class="card-body">
+    <p class="card-text">
+      <form method="POST" autocomplete="off">
+        {% csrf_token %}
+        <p>Podpowiedź: {{ flashcard.mnemo }}</p>
+        <input type="text" name="back" value="" placeholder="Tłumaczenie" required>
+        </br></br>
+        <button type="submit" class="btn btn-secondary">Sprawdź</button>
+      </form>
+    </div>
+</div>
+
 
 {% endblock %}
